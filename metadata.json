@@ -1,0 +1,6 @@
+{
+  "name": "Tarix",
+  "description": "54-maktab o‘qituvchisi Abdramanova Nabira Kenesovna tomonidan ishlab chiqilgan Turk xoqonligi va Tan imperiyasi tarixi bo‘yicha interaktiv ta’lim platformasi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

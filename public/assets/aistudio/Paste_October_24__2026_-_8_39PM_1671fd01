@@ -1,0 +1,1137 @@
+# MASTER PROMPT: TARIX — MULTITILLI, INTERAKTIV TARIXIY TA’LIM PLATFORMASI
+
+## 1. SENING ROLING
+
+Sen senior full-stack software architect, senior frontend developer, senior backend developer, UI/UX designer, UX researcher, QA engineer, DevOps engineer va tarixiy ta’lim platformalari bo‘yicha mutaxassissan.
+
+Sen production darajasidagi veb-ilovalar yaratish, ma’lumotlar bazasi arxitekturasi, xavfsizlik, accessibility, responsive dizayn, SEO, tarixiy ma’lumotlarni tuzish va deploy jarayonlarini yaxshi bilasan.
+
+Menga oddiy landing page, statik HTML shablon yoki faqat ko‘rinishi chiroyli demo kerak emas.
+
+Menga universitet talabalari va tarix o‘qituvchilari foydalanadigan, real ishlaydigan, ko‘p tilli, interaktiv, zamonaviy va keyinchalik kengaytirish mumkin bo‘lgan **TARIX** nomli tarixiy ta’lim platformasini yarat.
+
+Eng muhim talab: faqat kod yozish bilan cheklanma. Loyihani arxitektura, funksionallik, tarixiy aniqlik, dizayn, xavfsizlik va deploy nuqtayi nazaridan ham tekshir.
+
+Agar biror funksiya uchun tashqi servis, API kaliti, ma’lumotlar bazasi yoki autentifikatsiya konfiguratsiyasi zarur bo‘lsa, buni yashirma va ishlaydigan alternativani taklif qil.
+
+## 2. LOYIHA HAQIDA
+
+Loyiha nomi: **Tarix**
+
+Asosiy shior: **O‘tmishni anglash — kelajakni qurish.**
+
+Asosiy mavzu:
+- Turk xoqonligi.
+- Birinchi Turk xoqonligi.
+- Sharqiy va G‘arbiy Turk xoqonliklari.
+- Ikkinchi Turk xoqonligi.
+- Tan imperiyasi (Tang Dynasty).
+- Turk xoqonliklari va Tan imperiyasi o‘rtasidagi siyosiy, iqtisodiy, diplomatik va madaniy munosabatlar.
+- Buyuk ipak yo‘li.
+- Markaziy Osiyo va Sharqiy Osiyo tarixiy aloqalari.
+
+Maqsadli auditoriya:
+- Universitet talabalari.
+- Tarix yo‘nalishi talabalari.
+- Tarix o‘qituvchilari.
+- Mustaqil o‘rganuvchilar.
+- Tarixiy manbalar bilan ishlaydigan izlanuvchilar.
+
+Platformaning asosiy vazifasi talabaga sanalarni yodlatish emas, balki tarixiy jarayonlarni tushunish, dalillarni tahlil qilish, davlatlarni taqqoslash, sabab va oqibatlarni aniqlash hamda mustaqil tarixiy xulosa chiqarishni o‘rgatishdir.
+
+## 3. TEXNOLOGIK ARXITEKTURA
+
+Loyihani GitHub orqali versiyalash va Vercel platformasiga deploy qilish mumkin bo‘lgan tarzda qur.
+
+Asosiy texnologiyalar:
+- Next.js App Router.
+- React.
+- TypeScript — strict mode.
+- Tailwind CSS.
+- Zarur joylarda shadcn/ui va Lucide icons.
+- PostgreSQL ma’lumotlar bazasi.
+- Prisma ORM yoki unga mos, barqaror ORM.
+- Zod orqali input va API ma’lumotlarini validatsiya qilish.
+- Next.js Route Handlers orqali server API.
+- Autentifikatsiya uchun xavfsiz, server tomonidan tekshiriladigan yechim.
+- Testlar uchun Vitest va React Testing Library.
+- Zarur UI va end-to-end testlar uchun Playwright.
+
+Muhim arxitektura qoidalari:
+
+1. Loyihaning asosiy runtime va deploy muhiti Vercel bilan mos bo‘lishi kerak.
+2. AI Studio ichidagi maxsus runtime yoki faqat Google Cloud Run’da ishlaydigan yechimga qaram bo‘lib qolma.
+3. Next.js server funksiyalari, API route’lar va ma’lumotlar bazasi ulanishi Vercel serverless muhitiga mos bo‘lsin.
+4. PostgreSQL uchun tashqi, production uchun mos hosting ishlat. Database URL muhit o‘zgaruvchisi orqali olinishi kerak.
+5. Agar Next.js loyihasini AI Studio muhitida to‘g‘ridan-to‘g‘ri yaratish imkoniyati cheklangan bo‘lsa, buni ochiq ayt. Vercel uchun mos Next.js loyihasini yarat va uni AI Studio’dan GitHub’ga eksport qilish yoki sinxronlashtirish yo‘lini hujjatlashtir.
+6. Barcha dependency versiyalari o‘zaro mos bo‘lsin.
+7. Lockfile yaratilishi va GitHub’ga qo‘shilishi kerak.
+8. Server komponentlari va client komponentlarini to‘g‘ri ajrat.
+9. Keraksiz kutubxonalar, takroriy kod va haddan tashqari murakkab arxitekturadan qoch.
+10. Barcha asosiy sahifalar ishlaydigan bo‘lsin; hech qanday soxta tugma, ishlamaydigan havola yoki faqat bezak uchun yaratilgan boshqaruv elementi qolmasin.
+
+Tavsiya etiladigan papkalar tuzilmasi:
+
+- app/
+- app/[locale]/
+- app/api/
+- components/
+- components/ui/
+- components/layout/
+- components/history/
+- components/learning/
+- components/maps/
+- components/charts/
+- content/
+- dictionaries/
+- lib/
+- lib/auth/
+- lib/db/
+- lib/validation/
+- lib/history/
+- lib/i18n/
+- prisma/
+- public/
+- public/images/
+- public/icons/
+- tests/
+- e2e/
+- types/
+
+Bu tuzilmani amaliy ehtiyojga qarab yaxshilash mumkin, lekin kodni bitta katta komponentga joylashtirma.
+
+## 4. DIZAYN KONSEPSIYASI
+
+Dizayn nomi: **Modern Historical Editorial**.
+
+Dizayn falsafasi:
+- Minimalist.
+- Clean.
+- Premium editorial.
+- Akademik.
+- Zamonaviy.
+- Vizual jihatdan esda qoladigan.
+- Yoshlar uchun qiziqarli, lekin ortiqcha o‘yinlashtirilmagan.
+- Tarixiy muhitni zamonaviy interfeys bilan birlashtirgan.
+
+Sayt maktab o‘quvchilari uchun haddan tashqari bolalarcha ko‘rinmasin. Universitet darajasiga mos, ishonchli va professional bo‘lsin.
+
+Ilhom:
+- Zamonaviy ilmiy jurnallar.
+- Muzeylarning raqamli ekspozitsiyalari.
+- Interaktiv tarixiy atlaslar.
+- Minimalist ta’lim platformalari.
+- Premium hujjatli filmlar dizayni.
+
+### Ranglar tizimi
+
+Light mode:
+- Background: #F7F6F1
+- Surface: #FFFFFF
+- Primary: #17323B
+- Secondary: #14515A
+- Accent: #B88954
+- Muted: #718080
+- Border: #E1E6E1
+- Soft mint: #E6F0EB
+
+Dark mode:
+- Background: #10191D
+- Surface: #18262B
+- Elevated surface: #203238
+- Primary text: #F1F4F1
+- Secondary text: #B6C4C2
+- Accent: #D6AB77
+- Border: #314348
+
+Ranglarni CSS variables yoki Tailwind theme orqali boshqar.
+
+Har bir rang yetarli kontrastga ega bo‘lsin. Muhim ma’lumotlarni faqat rang orqali ifodalab qo‘yma.
+
+### Tipografiya
+
+Sarlavhalar uchun:
+- Playfair Display yoki unga mos, yaxshi ko‘rinadigan serif shrift.
+
+Asosiy matn uchun:
+- Inter yoki DM Sans.
+
+Tarixiy sana va statistik ma’lumotlar uchun:
+- O‘qilishi oson, bir xil raqam kengligiga ega tipografik uslub.
+
+Kirill, lotin va rus tilidagi belgilarni to‘liq qo‘llaydigan shriftlardan foydalan.
+
+### Interfeys qoidalari
+
+- Katta, mazmunli sarlavhalar.
+- Yetarli whitespace.
+- 12–16 px atrofida yumshoq radiuslar.
+- Yengil va tabiiy soyalar.
+- Minimal ikonalar.
+- Bir xil spacing tizimi.
+- Harakatlar 150–250 ms oralig‘ida va ortiqcha bo‘lmasin.
+- Har bir interaktiv element hover, focus, active va disabled holatlariga ega bo‘lsin.
+- Skeleton loading, empty state, error state va success state yaratilishi kerak.
+- Telefon ekranida navigatsiya qulay bo‘lsin.
+- Tungi rejimda barcha kartalar, xaritalar, diagrammalar, modal oynalar va matnlar to‘g‘ri ko‘rinsin.
+
+## 5. LOGO VA BRENDING
+
+“Tarix” nomli sodda va esda qoladigan logo yarat.
+
+Logo g‘oyasi:
+- Qadimgi bitiktosh shakli.
+- Minimal tarixiy ustun.
+- Kitob va vaqt chizig‘i ramzi.
+
+Logo juda murakkab bo‘lmasin. SVG yoki CSS orqali yaratilishi mumkin.
+
+Saytning asosiy brend elementi — tarixiy meros va zamonaviy texnologiya uyg‘unligi.
+
+Favicon, sahifa title’lari, metadata va Open Graph rasmlari ham qo‘shilsin.
+
+## 6. KO‘P TILLI TIZIM
+
+Sayt to‘liq uch tilni qo‘llashi shart:
+
+1. O‘zbek tili — lotin yozuvi: `uz`.
+2. O‘zbek tili — kirill yozuvi: `uz-Cyrl`.
+3. Rus tili: `ru`.
+4. Ingliz tili: `en`.
+
+Jami to‘rtta til rejimi bo‘lsin.
+
+Tilni tanlash header ichidagi qulay dropdown orqali amalga oshirilsin.
+
+Til almashtirilganda:
+- Faqat sarlavhalar emas, butun interfeys tarjima qilinsin.
+- Navigatsiya tarjima qilinsin.
+- Formlar va validatsiya xabarlari tarjima qilinsin.
+- Test savollari tarjima qilinsin.
+- Tarixiy maqolalar mavjud tarjimasiga almashtirilsin.
+- Tugmalar va modal oynalar tarjima qilinsin.
+- Sahifa metadata va title’lari moslashtirilsin.
+- Tanlangan til sahifa yangilangandan keyin saqlansin.
+
+Tarjima uchun tartibli JSON lug‘atlar yoki boshqa ishonchli i18n arxitekturasidan foydalan.
+
+Tavsiya etiladigan URL strukturasi:
+- /uz
+- /uz-Cyrl
+- /ru
+- /en
+
+Standart tilni o‘zbek lotin tili qilib belgilash mumkin.
+
+Til almashganda foydalanuvchini bosh sahifaga majburan qaytarma. Imkon qadar ayni sahifa va ayni maqolaning boshqa tilidagi versiyasini och.
+
+O‘zbek lotinidan kirillga avtomatik transliteratsiya yordamchi funksiya bo‘lishi mumkin, lekin tarixiy atamalar va atoqli otlarni tekshirilmagan holda avtomatik tarjima qilib yuborma.
+
+Tarixiy maqolalarning to‘rtta tildagi tarjimasi mazmunan mos va tabiiy bo‘lsin. Bir tilda mavjud bo‘lmagan maqolani soxta tarjima sifatida ko‘rsatma; tarjima mavjud emasligi haqida aniq holat ko‘rsat.
+
+## 7. LIGHT MODE VA DARK MODE
+
+Sayt to‘liq yorug‘ va tungi rejimda ishlasin.
+
+Talablar:
+- Header’da theme switcher bo‘lsin.
+- Light / Dark / System variantlari bo‘lsin.
+- Foydalanuvchining tanlovi saqlansin.
+- Dastlab tizimning rang sozlamasi hisobga olinsin.
+- Sahifa yuklanishida rang rejimi almashib ketishi, ya’ni flash, imkon qadar oldi olinsin.
+- Theme almashtirish sahifa reload qilmasdan amalga oshsin.
+- Barcha komponentlar ikkala rejimda tekshirilsin.
+- Xaritalar, SVG diagrammalar, grafiklar, tooltip va modal oynalar ham moslashsin.
+
+## 8. ASOSIY SAHIFALAR
+
+Quyidagi sahifalarni yarat.
+
+### 8.1. Bosh sahifa
+
+Hero bo‘limi:
+- “O‘tmishni anglash — kelajakni qurish.”
+- Turk xoqonligi va Tan imperiyasini o‘rganishga chaqiruvchi matn.
+- “O‘rganishni boshlash” tugmasi.
+- “Bilimingizni sinang” tugmasi.
+- Tarixiy xarita yoki sifatli tarixiy vizual.
+
+Hero dizayni juda katta bo‘sh joy yoki keraksiz gradientlar bilan to‘ldirilmasin. Birinchi ekranning o‘zidayoq loyiha nimaga xizmat qilishi tushunarli bo‘lsin.
+
+Keyingi bo‘limlar:
+- O‘quv mavzulari.
+- Davrlar bo‘yicha vaqt chizig‘i.
+- Turk xoqonligi va Tan imperiyasi taqqoslanishi.
+- Interaktiv xaritaga kirish.
+- Bugungi o‘rganish rejasi.
+- Tavsiya etilgan maqolalar.
+- Davom ettirish bo‘limi.
+- Testga tezkor kirish.
+- Ilmiy manbalar.
+- Footer.
+
+### 8.2. Mavzular katalogi
+
+Funksiyalar:
+- Mavzular ro‘yxati.
+- Kategoriyalar bo‘yicha filtrlash.
+- Qidiruv.
+- Davr bo‘yicha saralash.
+- Qiyinlik darajasi.
+- O‘qish davomiyligi.
+- O‘rganilgan va o‘rganilmagan holat.
+- Kartochkali va ro‘yxat ko‘rinishi.
+- Bo‘sh natija holati.
+- Filtrlarni tozalash.
+
+### 8.3. Turk xoqonligi sahifasi
+
+Quyidagi mavzular bo‘lsin:
+- Tarixiy sharoit va tashkil topish.
+- Bumin xoqon.
+- Istami yabg‘u.
+- Davlat boshqaruvi.
+- Xoqon, yabg‘u, shad kabi lavozimlar.
+- Harbiy tashkilot.
+- Qabila ittifoqlari.
+- Ko‘chmanchi chorvachilik.
+- Shaharlar va vohalar bilan iqtisodiy aloqalar.
+- Buyuk ipak yo‘li.
+- Diplomatik aloqalar.
+- Sharqiy va G‘arbiy Turk xoqonliklari.
+- Ikkinchi Turk xoqonligi.
+- Bilga xoqon.
+- Kultegin.
+- To‘nyuquq.
+- Orxon bitiktoshlari.
+- Uyg‘ur xoqonligining yuksalishi.
+- Davlatning zaiflashuvi va tarixiy merosi.
+
+Har bir mavzu quyidagi tuzilishga ega bo‘lsin:
+1. Qisqa mazmun.
+2. Tarixiy kontekst.
+3. Asosiy tushunchalar.
+4. Muhim shaxslar.
+5. Xronologiya.
+6. Sabablar va oqibatlar.
+7. Xarita yoki vizual material.
+8. Tarixiy manbalar.
+9. Mustaqil tahlil savollari.
+10. Mavzu yakunidagi mini-test.
+11. Keyingi o‘rganish uchun tavsiya.
+
+### 8.4. Tan imperiyasi sahifasi
+
+Quyidagilar yoritilsin:
+- Tan sulolasining tashkil topishi.
+- Li Yuan va sulolaning ilk davri.
+- Taizong davri.
+- Wu Zetian hukmronligi.
+- Xuanzong davri.
+- Markazlashgan boshqaruv.
+- Imperator saroyi.
+- Davlat xizmatchilari tizimi.
+- Dehqonchilik va yer munosabatlari.
+- Hunarmandchilik va savdo.
+- Chang’an va Luoyang shaharlari.
+- Buyuk ipak yo‘li.
+- Turk davlatlari bilan diplomatiya.
+- Harbiy yurishlar va chegaralar.
+- Buddizm va boshqa diniy an’analar.
+- Adabiyot, she’riyat va san’at.
+- An Lushan qo‘zg‘oloni.
+- Hududiy harbiy hokimiyatlarning kuchayishi.
+- Sulolaning 907-yilda tugashi.
+- Tan davrining tarixiy merosi.
+
+Tarixiy voqealarni quruq faktlar shaklida emas, balki ularning sabablari, rivojlanishi, oqibatlari va tarixchilar tomonidan izohlanishi bilan tushuntir.
+
+### 8.5. Davlatlarni taqqoslash sahifasi
+
+Turk xoqonligi va Tan imperiyasini quyidagi mezonlar bo‘yicha interaktiv taqqosla:
+- Davlat tashkil topishi.
+- Siyosiy boshqaruv.
+- Hokimiyatning legitimligi.
+- Harbiy tashkilot.
+- Iqtisodiy hayot.
+- Chorvachilik va dehqonchilik.
+- Savdo.
+- Shahar madaniyati.
+- Diplomatiya.
+- Din va dunyoqarash.
+- Yozma manbalar.
+- Tarixiy geografiya.
+- Davlatning zaiflashuv omillari.
+- Tarixiy meros.
+
+Foydalanuvchi mezonni tanlab, ikkala davlat haqidagi tegishli ma’lumotni yonma-yon ko‘ra olsin.
+
+Taqqoslashda bir davlatni mutlaq ustun yoki ikkinchisini mutlaq qoloq qilib ko‘rsatma. Har bir davlatning o‘z tarixiy sharoitini hisobga ol.
+
+### 8.6. Interaktiv vaqt chizig‘i
+
+Timeline zamonaviy, silliq va foydalanishga qulay bo‘lsin.
+
+Muhim sanalar:
+- 552 — Birinchi Turk xoqonligining tashkil topishi.
+- 603 — Turk xoqonligining sharqiy va g‘arbiy qismlarga ajralishi.
+- 618 — Tan sulolasining tashkil topishi.
+- 630 — Sharqiy Turk xoqonligining Tan qo‘shinlari tomonidan mag‘lub etilishi.
+- 657 — G‘arbiy Turk xoqonligining Tan tomonidan mag‘lub etilishi bilan bog‘liq muhim voqea.
+- 682 — Ikkinchi Turk xoqonligining tiklanishi.
+- 698 — Ikkinchi xoqonlik davridagi muhim siyosiy o‘zgarishlar uchun tegishli kontekst.
+- 744 — Ikkinchi Turk xoqonligining tugashi va Uyg‘ur xoqonligining yuksalishi.
+- 755 — An Lushan qo‘zg‘olonining boshlanishi.
+- 840 — Uyg‘ur xoqonligining tugashi.
+- 907 — Tan sulolasi hukmronligining tugashi.
+
+Har bir sana uchun:
+- Voqea nomi.
+- Qisqa izoh.
+- Tarixiy ahamiyat.
+- Sabab va oqibat.
+- Tegishli shaxslar.
+- Manbaga havola.
+- Xarita bilan bog‘lanish.
+
+Sanalar va voqealar o‘rtasidagi bog‘liqlikni tushunarli ko‘rsat.
+
+Tarixiy sanalarning ayrimlari turli ilmiy manbalarda tafsilotlari bilan farqlanishi mumkin. Bunday holatlarda manba va izohni ko‘rsat.
+
+### 8.7. Interaktiv xarita
+
+Turk xoqonligi va Tan imperiyasi tarixiy geografiyasini o‘rganish uchun xarita yarat.
+
+Imkoniyatlar:
+- Tarixiy markazlarni belgilash.
+- Poytaxtlarni ko‘rsatish.
+- Buyuk ipak yo‘li yo‘nalishlarini chizish.
+- Davlatlarning taxminiy hududiy ta’sir doiralarini ko‘rsatish.
+- Davrni tanlash.
+- Qatlamlarni yoqish va o‘chirish.
+- Xarita markerini bosganda izohli popup ochish.
+- Shaharlar va tarixiy hududlarni qidirish.
+- Xaritani kattalashtirish va kichraytirish.
+- Telefon ekraniga mos xarita.
+
+Leaflet yoki MapLibre kabi mos kutubxonadan foydalan.
+
+Muhim: tarixiy davlatlarning chegaralarini zamonaviy davlat chegaralari kabi aniq va o‘zgarmas chiziqlar sifatida tasvirlama. Hududlar davrga qarab o‘zgarganini ko‘rsat. Zarur bo‘lsa, taxminiy hududlar alohida vizual uslub bilan ifodalansin.
+
+Agar ishonchli geoma’lumotlar mavjud bo‘lmasa, soxta koordinatalar yoki tarixiy chegaralarni o‘ylab topma. Ma’lumotlar yetishmasligini qayd et va keyinchalik tekshirilgan GeoJSON bilan almashtirish mumkin bo‘lgan arxitektura yarat.
+
+### 8.8. Testlar va bilimni baholash
+
+Test tizimi to‘liq ishlasin.
+
+Imkoniyatlar:
+- Bir nechta variantli savollar.
+- To‘g‘ri va noto‘g‘ri javoblarni aniqlash.
+- Har bir javobdan keyin tushuntirish.
+- Savollarni mavzular bo‘yicha tanlash.
+- Qiyinlik darajasini belgilash.
+- Testni qayta ishlash.
+- Natijalarni hisoblash.
+- Test yakunida foizli natija.
+- Noto‘g‘ri javoblar tahlili.
+- Savolga belgi qo‘yish.
+- Testni davom ettirish imkoniyati.
+- Natijani chop etish yoki eksport qilish imkoniyati.
+- Mobil qurilmada qulay foydalanish.
+
+Savollar oddiy sanalarni yodlash bilan cheklanmasin. Ular quyidagi ko‘nikmalarni ham tekshirsin:
+- Sabab-oqibat munosabatlari.
+- Manba tahlili.
+- Tarixiy kontekst.
+- Davlatlarni taqqoslash.
+- Vaqt ketma-ketligi.
+- Dalillarga asoslangan xulosa chiqarish.
+
+Har bir savolning javobi va izohi oldindan tekshirilgan ma’lumotlarga asoslangan bo‘lsin.
+
+### 8.9. O‘quv jarayoni va progress
+
+Talaba uchun dashboard yaratilishi kerak.
+
+Unda:
+- O‘rganilgan mavzular.
+- O‘rganilishi kerak bo‘lgan mavzular.
+- Yakunlangan testlar.
+- O‘rtacha natija.
+- Oxirgi faoliyat.
+- Tavsiya etilgan keyingi mavzu.
+- Shaxsiy bookmarklar.
+- O‘qishni davom ettirish.
+- O‘rganish bo‘yicha umumiy progress.
+
+Agar foydalanuvchi tizimga kirmagan bo‘lsa, demo rejimda local progress ishlashi mumkin. Tizimga kirgan foydalanuvchi uchun progress serverda saqlansin.
+
+Local progress va serverdagi progress bir-biriga aralashib ketmasin.
+
+### 8.10. Manbalar va kutubxona
+
+Tarixiy manbalar uchun alohida bo‘lim yarat.
+
+Manba turlari:
+- Birlamchi yozma manbalar.
+- Epigrafik yodgorliklar.
+- Arxeologik materiallar.
+- Ilmiy maqolalar.
+- Akademik kitoblar.
+- Muzey kolleksiyalari.
+- Tarixiy atlaslar.
+- Ishonchli ilmiy ma’lumotlar bazalari.
+
+Har bir manba uchun:
+- Nomi.
+- Muallifi yoki tashkiloti.
+- Nashr sanasi, mavjud bo‘lsa.
+- Manba turi.
+- Qisqa tavsif.
+- Tegishli tarixiy mavzu.
+- Tashqi havola.
+- Foydalanilgan sana yoki bibliografik ma’lumot, mavjud bo‘lsa.
+
+Orxon bitiktoshlari, Xitoy sulolaviy tarixlari va Tan davriga oid materiallarni tahlil qilish uchun tegishli ilmiy manbalarni kirit.
+
+Birlamchi manba bilan zamonaviy tarixchi sharhini farqlab ko‘rsat.
+
+Soxta kitoblar, uydirma mualliflar, mavjud bo‘lmagan URL manzillar yoki tekshirilmagan iqtiboslar yaratma.
+
+## 9. TARIXIY MAZMUN UCHUN ILMIY TALABLAR
+
+Bu loyiha tarixiy ta’lim platformasi. Shuning uchun tarixiy aniqlik dizayn kabi muhim.
+
+Asosiy tamoyillar:
+
+1. Turk xoqonligi va Tan imperiyasining tarixini aniq davrlarga ajrat.
+2. Birinchi Turk xoqonligi va Ikkinchi Turk xoqonligini bir xil siyosiy davr sifatida ko‘rsatma.
+3. Sharqiy va G‘arbiy Turk xoqonliklari o‘rtasidagi farqlarni tushuntir.
+4. “Turk xoqonligi” atamasining qaysi davlat yoki davrga nisbatan ishlatilayotganini aniqlashtir.
+5. Tan imperiyasini faqat Xitoyning ichki tarixi doirasida emas, balki Yevrosiyo xalqaro munosabatlari doirasida ham tahlil qil.
+6. Harbiy to‘qnashuvlar bilan birga savdo, diplomatiya, madaniy aloqalar va o‘zaro ta’sirlarni ham yorit.
+7. Tarixiy jarayonlarni zamonaviy milliy chegaralar bilan chalkashtirma.
+8. Hozirgi millatlarni qadimgi siyosiy tuzilmalar bilan avtomatik tenglashtirma.
+9. Tarixiy shaxslarning hayot sanalari va unvonlari uchun ishonchli manbalardan foydalan.
+10. Turli ilmiy qarashlar mavjud bo‘lsa, ularni kontekst bilan tushuntir.
+11. Har bir muhim tarixiy maqola uchun manbalar ro‘yxatini ko‘rsat.
+12. Har bir faktni manbaga bog‘lash imkoniyati bo‘lsin.
+
+Tavsiya etiladigan ilmiy manba yo‘nalishlari:
+- Encyclopaedia Britannica.
+- UNESCO materiallari.
+- Smithsonian Institution.
+- The Metropolitan Museum of Art.
+- Cambridge University Press.
+- Oxford University Press.
+- Ilmiy jurnallar.
+- Universitet nashrlari.
+- Birlamchi tarixiy manbalarning ishonchli tarjimalari.
+
+Tashqi manbani avtomatik ravishda ishonchli deb hisoblama. Uning muallifi, nashr qiluvchi tashkiloti va mazmunini tekshirish mezonlarini qo‘llash kerak.
+
+Agar web qidiruv yoki boshqa tekshiruv vositalari mavjud bo‘lmasa, manba tekshirilgan deb da’vo qilma.
+
+## 10. AI ASISTENT — “TARIXCHI”
+
+Platformada ixtiyoriy AI yordamchi moduli bo‘lsin.
+
+Yordamchining nomi: **Tarixchi**.
+
+Vazifalari:
+- Murakkab tarixiy tushunchalarni sodda tushuntirish.
+- Tarixiy voqealarni taqqoslash.
+- Talabaga mavzu bo‘yicha savollar berish.
+- O‘quv rejasi tavsiya qilish.
+- Tarixiy matnni qisqacha umumlashtirish.
+- Manbalarni tahlil qilishga yordam berish.
+- Testdan keyin xatolarni tushuntirish.
+
+AI yordamchi talabaga tayyor xulosa berish bilan cheklanmasin. U talabani dalillarni ko‘rish, savol berish va mustaqil fikrlashga undasin.
+
+AI tarixiy ma’lumotni to‘qib chiqarmasligi uchun:
+- Iloji boricha platformadagi tekshirilgan manbalar bazasiga tayan.
+- Javobda foydalanilgan manbalarni ko‘rsat.
+- Yetarli dalil bo‘lmasa, buni aniq ayt.
+- Taxminni tasdiqlangan tarixiy fakt sifatida ko‘rsatma.
+- Turli tarixiy talqinlarni ajratib tushuntir.
+- Foydalanuvchi savolini mavzu doirasida saqlashga harakat qil.
+
+AI integratsiyasi server orqali amalga oshirilsin. Gemini API kaliti hech qachon client bundle, brauzer kodi, GitHub repository yoki ommaviy loglarda ko‘rinmasin.
+
+API kalitini faqat server-side environment variable yoki secrets boshqaruvi orqali ol.
+
+Agar API kaliti sozlanmagan bo‘lsa, saytning qolgan funksiyalari ishlashda davom etsin. AI bo‘limida tushunarli konfiguratsiya holati ko‘rsatilsin.
+
+AI javoblarini to‘liq tarixiy manba deb qabul qilmaslik kerakligi haqida foydalanuvchiga eslatma ber.
+
+## 11. QIDIRUV VA NAVIGATSIYA
+
+Global qidiruv yarat.
+
+Qidiruv quyidagilarni qamrab olsin:
+- Tarixiy shaxslar.
+- Davlatlar.
+- Sanalar.
+- Maqolalar.
+- Atamalar.
+- Tarixiy joylar.
+- Manbalar.
+
+Funksiyalar:
+- Tezkor qidiruv.
+- Natijalarni kategoriyalarga ajratish.
+- Qidiruv so‘zlarini natijalarda ajratib ko‘rsatish.
+- Klaviatura orqali boshqarish.
+- Qidiruv natijasi topilmaganda foydali xabar.
+- Natijaga bosilganda tegishli sahifaga o‘tish.
+
+Navigatsiya sodda va tushunarli bo‘lsin. Mobil ekranda menyu ochilib-yopilishi, keyboard focus va escape tugmasi to‘g‘ri ishlasin.
+
+## 12. MA’LUMOTLAR BAZASI
+
+PostgreSQL uchun mantiqan to‘g‘ri va kengaytiriladigan schema yarat.
+
+Asosiy modellar:
+- User.
+- UserProfile.
+- Role yoki tegishli ruxsatlar tizimi.
+- Article.
+- ArticleTranslation.
+- Topic.
+- TopicTranslation.
+- HistoricalEvent.
+- HistoricalPerson.
+- HistoricalPlace.
+- HistoricalMapLayer.
+- Source.
+- ArticleSource.
+- Quiz.
+- Question.
+- AnswerOption.
+- QuizAttempt.
+- UserProgress.
+- Bookmark.
+- StudyPlan.
+
+Model nomlari va munosabatlarni o‘zaro izchil tashkil qil.
+
+Talablar:
+- Primary key va foreign key.
+- Unique constraint.
+- Zarur indekslar.
+- Timestamps.
+- Ma’lumotlar validatsiyasi.
+- Tegishli cascade siyosati.
+- Keraksiz takroriy ma’lumotlardan qochish.
+- Tarjima ma’lumotlarini tartibli saqlash.
+- Database migration.
+- Boshlang‘ich seed data.
+- Demo kontent.
+- Backup va migratsiya bo‘yicha hujjat.
+
+Agar to‘liq database sozlash hozircha mumkin bo‘lmasa, ishlaydigan demo rejimini yarat. Lekin demo rejimini production ma’lumotlar bazasi deb ko‘rsatma.
+
+## 13. AUTHENTICATION VA ROLE-BASED ACCESS
+
+Quyidagi foydalanuvchi rollarini qo‘llab-quvvatla:
+- Guest.
+- Student.
+- Teacher.
+- Admin.
+
+Talablar:
+- Xavfsiz login va logout.
+- Parollarni ochiq matnda saqlamaslik.
+- Serverda autentifikatsiyani tekshirish.
+- Serverda ruxsatlarni tekshirish.
+- Student boshqa foydalanuvchilarning shaxsiy natijalarini ko‘ra olmasligi.
+- Teacher faqat ruxsat berilgan ta’lim resurslarini boshqara olishi.
+- Admin funksiyalari faqat vakolatli foydalanuvchiga ochiq bo‘lishi.
+- Himoyalangan route va API endpointlar.
+- Maxfiy ma’lumotlarni client’ga yubormaslik.
+
+Google orqali login qo‘shilsa, OAuth konfiguratsiyasi va callback URL’lari to‘g‘ri hujjatlashtirilsin.
+
+Demo foydalanuvchi mavjud bo‘lsa, uni production administrator hisobi sifatida qoldirma.
+
+## 14. ADMIN PANEL
+
+Administrator uchun alohida dashboard yarat.
+
+Imkoniyatlar:
+- Maqola yaratish, tahrirlash va o‘chirish.
+- Tarjimalarni boshqarish.
+- Tarixiy sanalarni boshqarish.
+- Test savollarini boshqarish.
+- Manbalarni qo‘shish.
+- Foydalanuvchi rollarini boshqarish.
+- Materialni draft va published holatlariga ajratish.
+- Yetishmayotgan tarjimalarni aniqlash.
+- Noto‘g‘ri yoki bo‘sh havolalarni tekshirish.
+- Kontent yangilanish tarixini yuritish.
+
+Har bir muhim amal server tomonidan tekshirilsin.
+
+O‘chirish kabi xavfli amallar tasdiqlash oynasi orqali bajarilsin.
+
+## 15. XAVFSIZLIK
+
+Production uchun quyidagilarni hisobga ol:
+
+- Server-side input validation.
+- SQL injection’dan himoya.
+- XSS xavfini kamaytirish.
+- CSRF xavfini tegishli auth usuliga qarab boshqarish.
+- Rate limiting, ayniqsa AI API va login endpointlari uchun.
+- Maxfiy ma’lumotlarni loglarga yozmaslik.
+- API kalitlarini client’ga chiqarmaslik.
+- .env fayllarini Git’ga qo‘shmaslik.
+- `.env.example` yaratish, lekin haqiqiy maxfiy qiymatlarni kiritmaslik.
+- Server xatolarida maxfiy stack trace’larni foydalanuvchiga ko‘rsatmaslik.
+- Foydalanuvchi yuborgan matnni xavfsiz qayta ishlash.
+- Upload funksiyasi qo‘shilsa, fayl turi, hajmi va ruxsatlarni tekshirish.
+- Admin API’larini autentifikatsiya va ruxsat tekshiruvi bilan himoyalash.
+
+Xavfsizlikni faqat UI darajasida amalga oshirma. Asosiy tekshiruv serverda bajarilishi shart.
+
+## 16. ACCESSIBILITY
+
+WCAG 2.2 AA talablariga imkon qadar rioya qil.
+
+Talablar:
+- Semantik HTML.
+- Keyboard navigation.
+- Ko‘rinadigan focus.
+- Yetarli rang kontrasti.
+- Form elementlarida label.
+- Ekran o‘quvchilar uchun accessible nomlar.
+- Modal oynalarda focus boshqaruvi.
+- Xatolarni matn bilan tushuntirish.
+- Reduced motion sozlamasini hurmat qilish.
+- Rasm uchun mazmunli alt matn.
+- Grafik va xaritalar uchun matnli alternativ.
+- Interaktiv elementlar yetarli o‘lchamda bo‘lishi.
+
+## 17. RESPONSIVE DESIGN
+
+Quyidagi ekranlarda sinovdan o‘tkaz:
+- 320 px mobil ekran.
+- 375 px mobil ekran.
+- 768 px planshet.
+- 1024 px noutbuk.
+- 1440 px desktop.
+- Katta desktop ekranlar.
+
+Talablar:
+- Gorizontal scroll tasodifan paydo bo‘lmasin.
+- Matn o‘qilishi oson bo‘lsin.
+- Jadval mobil ekranda scroll yoki moslashuvchan kartalar bilan ko‘rsatilsin.
+- Xarita boshqaruvlari mobilga mos bo‘lsin.
+- Modal oynalar ekranga sig‘sin.
+- Header va footer barcha ekranlarda to‘g‘ri ko‘rinsin.
+
+## 18. SEO VA ISHLASH TEZLIGI
+
+Quyidagilarni amalga oshir:
+- Har bir sahifaga mos title.
+- Meta description.
+- Canonical URL.
+- Hreflang va til variantlari.
+- Open Graph metadata.
+- Sitemap.
+- Robots.txt.
+- To‘g‘ri heading hierarchy.
+- Semantik maqola tuzilmasi.
+- Rasmlarni optimallashtirish.
+- Keraksiz JavaScript’ni kamaytirish.
+- Lazy loading.
+- Zarur joylarda server rendering.
+- Keraksiz client-side rendering’dan qochish.
+- Fontlarni optimallashtirish.
+- Loading holatlari.
+- Xatolik sahifalari.
+- 404 sahifasi.
+- Performance va accessibility tekshiruvlari.
+
+SEO uchun mazmunsiz matn yoki sun’iy kalit so‘zlar bilan to‘ldirilgan sahifalar yaratma.
+
+## 19. TARIXIY VIZUALLAR VA MEDIA
+
+Tarixiy muhitni ifodalash uchun sifatli vizual materiallardan foydalan.
+
+Tavsiya:
+- Orxon bitiktoshlari.
+- Qadimgi turkiy yodgorliklar.
+- Tan davri san’ati.
+- Chang’an shahrining tarixiy rekonstruksiyalari.
+- Buyuk ipak yo‘li xaritalari.
+- Tarixiy buyumlar va muzey kolleksiyalari.
+
+Rasm tanlashda:
+- Litsenziya va foydalanish huquqini tekshir.
+- Rasm manbasini qayd et.
+- Tasvirni noto‘g‘ri tarixiy davr bilan bog‘lama.
+- Zamonaviy yoki boshqa davrga tegishli suratni qadimgi tarixiy foto sifatida ko‘rsatma.
+- Sun’iy intellekt yaratgan rekonstruksiyani haqiqiy arxeologik fotosurat deb ko‘rsatma.
+- Alt matn yoz.
+- Rasm yuklanmasa fallback ko‘rsat.
+
+Barcha tasvirlar uchun yagona vizual uslub saqlansin.
+
+## 20. TARIXIY O‘RGANISHNI QIZIQARLI QILADIGAN IJODIY FUNKSIYALAR
+
+Quyidagi funksiyalarni platformaning arxitekturasi va vaqtiga mos ravishda ishlab chiq.
+
+### A. Tarixiy detektiv
+
+Talabaga birlamchi manba, tarixiy dalil yoki voqea tavsifi beriladi. U dalillarga asoslanib savollarga javob beradi.
+
+### B. “Sabab yoki oqibat?”
+
+Foydalanuvchi tarixiy hodisalarni sabab, jarayon va oqibat kategoriyalariga ajratadi.
+
+### C. Tarixiy shaxslar kartalari
+
+Har bir shaxs uchun:
+- Ismi.
+- Davri.
+- Unvoni.
+- Tarixiy roli.
+- Muhim voqealar.
+- Manbalar.
+- Tarixiy ahamiyati.
+
+### D. Sana va voqeani moslashtirish
+
+Foydalanuvchi sanalarni tegishli voqealar bilan moslashtiradi.
+
+### E. Tarixiy terminlar lug‘ati
+
+Xoqon, yabg‘u, shad, elchi, sulola, imperator, diplomatiya va boshqa atamalarni qidirish mumkin bo‘lsin.
+
+### F. O‘rganish yo‘li
+
+Talaba mavzularni ketma-ket o‘rganib, har bir bosqichda kichik topshiriqlarni bajaradi.
+
+### G. “Manbani tahlil qil”
+
+Manba parchasiga oid savollar:
+- Kim yozgan?
+- Qaysi davrda yaratilgan?
+- Muallifning maqsadi nima bo‘lishi mumkin?
+- Manbaning qanday cheklovlari bor?
+- Boshqa manba bilan solishtirganda nimalar aniqlanadi?
+
+### H. Kun savoli
+
+Har kuni bitta tarixiy savol va qisqa izoh. Bu funksiya mavjud bo‘lmagan server xizmatiga qaram bo‘lmasin.
+
+### I. Shaxsiy o‘quv maqsadi
+
+Talaba kunlik yoki haftalik o‘quv maqsadini belgilashi va o‘z progressini kuzatishi mumkin.
+
+Gamification sodda va foydali bo‘lsin. Keraksiz ballar, chalg‘ituvchi animatsiyalar va bolalarcha badge’lar bilan interfeysni to‘ldirma.
+
+## 21. DEMO MA’LUMOTLARI
+
+Sayt birinchi ishga tushirilganda bo‘sh bo‘lmasin.
+
+Kamida:
+- 12 ta tarixiy maqola.
+- 20 ta tarixiy sana.
+- 12 ta tarixiy shaxs.
+- 10 ta tarixiy atama.
+- 20 ta test savoli.
+- 8 ta ishonchli manba.
+- Bir nechta taqqoslash mezoni.
+- Xarita uchun tekshirilgan boshlang‘ich ma’lumotlar.
+
+Har bir asosiy kontent uchun tarjima holatini boshqar.
+
+Barcha to‘rtta til rejimida demo kontent mavjud bo‘lsin. Tarjimalar mazmunan mos bo‘lsin.
+
+Demo ma’lumotlarni seed skript orqali kiritish mumkin bo‘lsin.
+
+Seed skript qayta ishga tushirilganda keraksiz takroriy yozuvlar paydo bo‘lmasin.
+
+## 22. TESTLASH VA QA
+
+Loyihani tayyor deb e’lon qilishdan oldin quyidagi tekshiruvlarni bajargin.
+
+### Kod sifati
+- TypeScript tekshiruvi.
+- ESLint.
+- Production build.
+- Dependency tekshiruvi.
+- Import va export xatolari.
+- Noto‘g‘ri route’lar.
+- Console’dagi runtime xatolari.
+
+### Funksional testlar
+- Til almashtirish.
+- Theme almashtirish.
+- Qidiruv.
+- Filtrlar.
+- Test savollari.
+- Test natijasi.
+- Bookmark.
+- O‘quv progressi.
+- Login va logout.
+- Himoyalangan route’lar.
+- Admin ruxsatlari.
+- API validatsiyasi.
+- Xatolik holatlari.
+- Bo‘sh ma’lumot holatlari.
+
+### Vizual testlar
+- Mobil va desktop.
+- Light va dark mode.
+- Lotin va kirill yozuvi.
+- Rus va ingliz matnlari.
+- Uzun sarlavhalar.
+- Bo‘sh holatlar.
+- Loading holatlari.
+- Modal oynalar.
+- Jadval va xaritalar.
+
+### Production testlari
+
+Quyidagi buyruqlarni loyihaga moslab ishlat:
+
+`npm ci`
+
+`npm run lint`
+
+`npx tsc --noEmit`
+
+`npm run test`
+
+`npm run build`
+
+Agar Playwright sozlangan bo‘lsa, tegishli end-to-end testlarni ham bajargin.
+
+Agar biror buyruq `package.json`da mavjud bo‘lmasa, uni qo‘sh yoki hujjatlarda haqiqiy buyruqni ko‘rsat.
+
+Testlar ishlamagan bo‘lsa, ularni bajarilgan deb da’vo qilma.
+
+Har qanday build yoki test xatosi topilsa:
+1. Xatoning sababini aniqlagin.
+2. Kodni tuzat.
+3. Tegishli testni qayta ishga tushir.
+4. Boshqa funksiyalarga salbiy ta’sir qilmaganini tekshir.
+
+Bajarilmagan testlarni yashirma.
+
+## 23. GITHUB UCHUN TALABLAR
+
+Loyihani GitHub repository’ga joylashtirishga tayyorla.
+
+Repository nomi:
+`tarix-education-platform`
+
+GitHub uchun:
+- Toza papkalar tuzilmasi.
+- README.md.
+- `.gitignore`.
+- `.env.example`.
+- `package.json`.
+- Lockfile.
+- Database schema va migration.
+- Seed skript.
+- Testlar.
+- Litsenziya haqida izoh.
+- O‘rnatish bo‘yicha ko‘rsatmalar.
+- Environment variable hujjatlari.
+- Deploy bo‘yicha ko‘rsatmalar.
+
+Haqiqiy API kalitlari, parollar, tokenlar, shaxsiy ma’lumotlar va production secret’lar GitHub’ga yuborilmasin.
+
+Agar Google AI Studio’da GitHub integratsiyasi mavjud bo‘lsa, repository’ni ulash va sync qilish imkoniyatidan foydalan.
+
+Ammo mening nomimdan ruxsatsiz repository yaratma, mavjud repository’ni o‘zgartirma yoki mavjud ma’lumotlarni o‘chirib yuborma. Buning uchun foydalanuvchi tomonidan zarur ruxsat va tasdiq talab qilinadi.
+
+## 24. VERCEL DEPLOY TALABLARI
+
+Loyiha Vercel’da deploy qilishga tayyor bo‘lishi kerak.
+
+Quyidagilarni tayyorla:
+- Vercel bilan mos Next.js arxitekturasi.
+- To‘g‘ri `package.json` skriptlari.
+- Production build.
+- Environment variable ro‘yxati.
+- PostgreSQL ulanish konfiguratsiyasi.
+- Database migration bo‘yicha ko‘rsatma.
+- Production va preview muhitlari uchun sozlamalar.
+- Zarur bo‘lsa `vercel.json`.
+- Deployment uchun README yo‘riqnomasi.
+
+Muhim environment variable nomlari:
+- `DATABASE_URL`
+- `AUTH_SECRET` yoki ishlatilayotgan auth kutubxonasining tegishli secret’i.
+- `GEMINI_API_KEY` — faqat AI yordamchi yoqilgan bo‘lsa.
+- OAuth kalitlari — faqat OAuth funksiyasi yoqilgan bo‘lsa.
+
+Bu o‘zgaruvchilarning haqiqiy maxfiy qiymatlarini kodga yozma.
+
+Vercel sozlamalarida kerakli environment variable’lar qo‘lda kiritilishi kerak bo‘lsa, buni aniq hujjatlashtir.
+
+Next.js loyihasi uchun Vercel framework’ni avtomatik aniqlashi mumkin, lekin deploydan oldin build va environment variable’larni tekshir.
+
+GitHub’ga push qilingandan keyin Vercel repository’ni import qilish va production branch’ni tanlash orqali deploy qilish mumkin.
+
+Loyiha deploy qilingan deb aytish uchun haqiqiy deployment natijasi va ishlaydigan URL bo‘lishi kerak.
+
+Agar Vercel hisobiga, GitHub’ga yoki tashqi servisga kirish imkoniyating bo‘lmasa, deploy jarayonini to‘liq bajarganingni da’vo qilma. Menga keyingi amallarni aniq ko‘rsat.
+
+## 25. README TALABLARI
+
+README.md quyidagilarni o‘z ichiga olsin:
+
+1. Loyiha haqida.
+2. Funksiyalar ro‘yxati.
+3. Texnologiyalar.
+4. Papkalar tuzilmasi.
+5. Talab qilinadigan dasturlar.
+6. O‘rnatish.
+7. Development server’ni ishga tushirish.
+8. Environment variable’lar.
+9. Database migration.
+10. Seed data.
+11. Testlarni ishga tushirish.
+12. Production build.
+13. GitHub bilan ishlash.
+14. Vercel deploy.
+15. AI API kalitini xavfsiz sozlash.
+16. Ma’lum cheklovlar.
+17. Tarixiy manbalar va kontentni tekshirish tartibi.
+
+README faqat umumiy tavsif bo‘lmasin. Loyihani yangi kompyuterda ishga tushirish uchun yetarli aniq ko‘rsatmalar berilsin.
+
+## 26. ISHLAB CHIQISH TARTIBI
+
+Quyidagi bosqichlarni ketma-ket bajar.
+
+### 1-bosqich: Tahlil
+- Talablarni tahlil qil.
+- Arxitekturani tanla.
+- Sahifalar xaritasini tuz.
+- Ma’lumotlar modelini rejalashtir.
+- Tashqi servislar va cheklovlarni aniqlagin.
+
+### 2-bosqich: Dizayn tizimi
+- Ranglar.
+- Tipografiya.
+- Spacing.
+- Tugmalar.
+- Kartalar.
+- Navigatsiya.
+- Light va dark theme.
+- Responsive qoidalar.
+
+### 3-bosqich: Asosiy frontend
+- Layout.
+- Header.
+- Footer.
+- Bosh sahifa.
+- Mavzular katalogi.
+- Tarixiy maqola sahifalari.
+- Taqqoslash.
+- Timeline.
+- Xarita.
+
+### 4-bosqich: Backend
+- Database schema.
+- API.
+- Validatsiya.
+- Authentication.
+- Authorization.
+- O‘quv progressi.
+- Test natijalari.
+- Admin panel.
+
+### 5-bosqich: Tarixiy kontent
+- Tekshirilgan maqolalar.
+- Tarixiy shaxslar.
+- Sanalar.
+- Manbalar.
+- Test savollari.
+- To‘rtta tilga mos tarjimalar.
+
+### 6-bosqich: Qo‘shimcha funksiyalar
+- Qidiruv.
+- Bookmark.
+- Tarixchi AI yordamchisi.
+- O‘quv rejasi.
+- Progress dashboard.
+
+### 7-bosqich: QA
+- TypeScript.
+- Lint.
+- Unit testlar.
+- Production build.
+- E2E testlar.
+- Responsive tekshiruv.
+- Accessibility.
+- Xavfsizlik.
+
+### 8-bosqich: Deployga tayyorlash
+- README.
+- `.env.example`.
+- `.gitignore`.
+- GitHub repository bilan ulash bo‘yicha ko‘rsatma.
+- Vercel konfiguratsiyasi.
+- Yakuniy test hisoboti.
+
+Agar bir vaqtning o‘zida barcha bosqichlarni bajarish imkoniyati cheklangan bo‘lsa, ishni sifatni saqlagan holda kichik bosqichlarga ajrat. Har bir bosqichda mavjud kodni buzmasdan davom et.
+
+## 27. YAKUNIY SIFAT MEZONLARI
+
+Loyihani quyidagi shartlar bajarilmaguncha tugallangan deb hisoblama:
+
+- Saytning asosiy sahifalari ishlaydi.
+- Dizayn barcha asosiy ekranlarga mos.
+- To‘rtta til rejimi ishlaydi.
+- Light va dark mode ishlaydi.
+- Tarixiy mavzular bir-biri bilan mantiqan bog‘langan.
+- Test tizimi javoblarni to‘g‘ri tekshiradi.
+- Tarixiy manbalar ko‘rsatilgan.
+- Qidiruv va navigatsiya ishlaydi.
+- Backend va database konfiguratsiyasi aniq.
+- Xavfsizlik qoidalari bajarilgan.
+- Production build muvaffaqiyatli.
+- Mavjud testlar muvaffaqiyatli.
+- GitHub’ga maxfiy kalitlar kiritilmagan.
+- Vercel deploy uchun zarur ko‘rsatmalar tayyor.
+- README loyiha bilan mos.
+- Ishlamaydigan tugmalar va soxta funksiyalar qolmagan.
+
+Yakuniy javobda quyidagilarni aniq yoz:
+1. Nimalar yaratildi.
+2. Qaysi funksiyalar real ishlaydi.
+3. Qaysi testlar bajarildi va natijasi qanday.
+4. Qaysi tashqi servislarni sozlash talab etiladi.
+5. Qaysi environment variable’lar kerak.
+6. Qaysi funksiyalar hali bajarilmagan.
+7. GitHub va Vercel deploy uchun aniq keyingi qadamlar.
+
+Bajarilmagan ishlarni bajarilgan deb ko‘rsatma. Tekshirilmagan tarixiy faktlarni tasdiqlangan deb yozma. Hech qanday real deploy URL’ini o‘ylab topma.
+
+## 28. HOZIR BOSHLASH
+
+Endi ushbu talablar asosida loyihani yaratishni boshlagin.
+
+Birinchi navbatda to‘liq arxitekturani rejalashtir, keyin real kodni yarat. Faqat maslahat yoki kod namunalarini berib to‘xtab qolma.
+
+Menga ishlaydigan, estetik, to‘rt tilli, light/dark mode’li, tarixiy jihatdan asoslangan, xavfsiz va Vercel’ga deploy qilish uchun tayyor **TARIX** platformasini yarat.
+
+Asosiy ustuvorliklar tartibi:
+1. Tarixiy aniqlik.
+2. Ishlaydigan funksiyalar.
+3. Clean code va to‘g‘ri arxitektura.
+4. Minimalist va professional dizayn.
+5. To‘liq tarjima.
+6. Xavfsizlik.
+7. Testlar va deployga tayyorlik.
+
+Natija oddiy demo emas, balki bosqichma-bosqich production darajasiga olib chiqish mumkin bo‘lgan haqiqiy ta’lim platformasi bo‘lsin.
